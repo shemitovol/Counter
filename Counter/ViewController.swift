@@ -7,19 +7,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
-    @IBOutlet weak var counterValue: UILabel!
-    @IBOutlet weak var updateBotton: UIButton!
-    @IBOutlet weak var plusButton: UIButton!
-    @IBOutlet weak var minusButton: UIButton!
-    @IBOutlet weak var historyOfChanges: UITextView!
+    @IBOutlet weak private var counterValue: UILabel!
+    @IBOutlet weak private var updateBotton: UIButton!
+    @IBOutlet weak private var plusButton: UIButton!
+    @IBOutlet weak private var minusButton: UIButton!
+    @IBOutlet weak private var historyOfChanges: UITextView!
+    
+    private var value: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    private var value: Int = 0
     
     private func dateFormatter() -> String {
         let dateFormatter = DateFormatter ()
